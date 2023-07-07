@@ -1,0 +1,29 @@
+{% extends 'layout/base.html.twig' %}
+{% import "profil/avatar.html.twig" as avatar %}
+
+{% block title %}
+	Page de profil
+{% endblock %}
+
+{% block main %}
+	<h1>Bonjour,
+		{{ app.user.email }}
+  </h1>
+	<div class='avatar-container'>
+		{{ avatar.avatar('avatar', app.user) }}
+	</div>
+	<div>
+		{{ form(avatarForm)}}
+	</div>
+	<hr>
+  <section>
+    {{ form(postFormulaire) }}
+  </section>
+  <hr>
+  <section class="posts">
+    {% for post in app.user.posts %}
+     {% include "profil/post.html.twig" %}
+    {% endfor %}
+  </section>
+
+{% endblock %}

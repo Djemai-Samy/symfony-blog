@@ -1,0 +1,86 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --primary-color: #011936;
+  --white-color: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.posts{
+  max-width: 800px;
+  margin: auto;
+}
+
+.post{
+
+  background-color: hsla(0, 0%, 95%, 0.8);
+  margin: 20px;
+  padding: 20px;
+
+}
+
+form{
+  background-color: hsla(0, 0%, 95%, 0.8);
+  margin: 20px;
+  padding: 20px;
+}
+
+input, textarea{
+  border: none;
+  padding:5px; 
+  width: 100%;
+  margin: 10px;
+}
+
+button{
+  background-color: var(--primary-color);
+  padding: 10px;
+  width: 100%;
+  color: var(--white-color);
+  border-radius: 5px;
+}
+
+.avatar-container{
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+
+}
+.avatar{
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.post-user{
+
+  display: flex;
+  align-items: center;
+
+}
+
+.avatar-post{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.post-image{
+  width: 100%;
+  max-width: 800px;
+}

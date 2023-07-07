@@ -1,0 +1,18 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block title %}
+	Page de connexion
+{% endblock %}
+
+{% block main %}
+	<h1>Connexion!</h1>
+
+	<form action="{{ path('login') }}" method="POST">
+
+		<input type="email" id="email" name="email" value="" required autofocus>
+
+		<input type="password" id="password" name="password" required>
+
+		<button type="submit">Login</button>
+	</form>
+{% endblock %}

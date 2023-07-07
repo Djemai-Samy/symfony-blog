@@ -1,0 +1,45 @@
+<nav>
+	<div class="nav-buttons">
+		<img class="nav-menu-button" src="/assets/images/menu-burger.svg" alt="Bouton pour ouvrir et fermer le menu">
+		<a href={{ path('home')}}>
+			<img class="nav-logo" src="/assets/images/logo.svg" alt="Logo du site">
+		</a>
+	</div>
+
+	<ul id="closed">
+		<li>
+			<a href={{ path('home')}}>
+				<img class="nav-icon" src="/assets/images/home.svg" alt="">
+				<span>Accueil</span>
+			</a>
+		</li>
+
+		{% if app.user %}
+			<li>
+				<a href={{ path('profil')}}>
+					<img class="nav-icon" src="/assets/images/user.svg" alt="">
+					<span>Profil</span>
+				</a>
+			</li>
+			<li>
+				<a href={{ path('logout')}}>
+					<img class="nav-icon" src="/assets/images/user.svg" alt="">
+					<span>Se deconnecter</span>
+				</a>
+			</li>
+		{% else %}
+			<li>
+				<a href={{ path('register')}}>
+					<img class="nav-icon" src="/assets/images/login.svg" alt="">
+					<span>Inscription</span>
+				</a>
+			</li>
+			<li>
+				<a href={{ path('login')}}>
+					<img class="nav-icon" src="/assets/images/user.svg" alt="">
+					<span>Connexion</span>
+				</a>
+			</li>
+		{% endif %}
+	</ul>
+</nav>

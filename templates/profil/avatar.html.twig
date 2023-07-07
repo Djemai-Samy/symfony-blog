@@ -1,0 +1,7 @@
+{% macro avatar(className, user) %}
+	{% if user.avatar %}
+		<img class={{className}} src="/assets/images/avatars/{{user.avatar}}" alt="">
+	{% else %}
+		<img class={{className}} src="/assets/images/avatars/default-avatar.png" alt="">
+	{% endif %}
+{% endmacro %}

@@ -1,0 +1,15 @@
+{% extends 'layout/base.html.twig' %}
+{% import "profil/avatar.html.twig" as avatar %}
+{% block title %}
+	Page d'accueil
+{% endblock %}
+
+{% block main %}
+	<h1>Accueil!</h1>
+
+  {% for post in posts %}
+     {% include "profil/post.html.twig" %}
+  {% endfor %}
+
+{% endblock %}
+
